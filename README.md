@@ -34,4 +34,4 @@ Command-line options on the app binary (`WiFi Doctor.app/Contents/MacOS/WiFiDoct
 
 ## How it was made
 
-WiFi Doctor was written with [Claude Code](https://claude.com/claude-code), Anthropic's AI coding tool. Claude wrote the code, tests and this README under the direction of the repository owner. Commits made with Claude carry a `Co-Authored-By: Claude` line.
+For transparency, WiFi Doctor was written with [Claude Code](https://claude.com/claude-code), Anthropic's AI coding tool. You can see this in the commits, which list Claude as co-author.
