@@ -1,3 +1,7 @@
+**In plain English:** you can use, change and share WiFi Doctor for free, for any noncommercial purpose. You can't use it to make money or as part of a business. If you share it, include this licence. The software comes with no warranty. This summary is for convenience only; the full licence below is what applies.
+
+---
+
 # PolyForm Noncommercial License 1.0.0
 
 <https://polyformproject.org/licenses/noncommercial/1.0.0>
