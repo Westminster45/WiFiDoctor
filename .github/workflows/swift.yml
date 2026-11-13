@@ -1,11 +1,18 @@
-# Builds the app and runs the tests on every push to main and every pull request.
+# Builds the app and runs the tests on every push to main and every pull request,
+# except changes that only touch text files.
 name: Swift
 
 on:
   push:
     branches: [ "main" ]
+    paths-ignore:
+      - "**.md"
+      - ".gitignore"
   pull_request:
     branches: [ "main" ]
+    paths-ignore:
+      - "**.md"
+      - ".gitignore"
 
 jobs:
   build:
