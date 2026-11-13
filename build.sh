@@ -40,7 +40,7 @@ cat > "$ENT" <<ENTITLEMENTS
   <key>com.apple.security.personal-information.location</key><true/>
 </dict></plist>
 ENTITLEMENTS
-# Ad hoc by default. To share the app, set SIGN_ID to a "Developer ID Application: …" identity and notarise (see README).
+# Ad hoc by default. To share the app, set SIGN_ID to a "Developer ID Application: …" identity and notarise.
 SIGN_ID="${SIGN_ID:--}"
 SIGN_ARGS=(--force --options runtime --entitlements "$ENT" --sign "$SIGN_ID")
 if [[ "$SIGN_ID" != "-" ]]; then SIGN_ARGS+=(--timestamp); fi
