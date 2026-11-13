@@ -37,3 +37,7 @@ Command-line options on the app binary (`WiFi Doctor.app/Contents/MacOS/WiFiDoct
 ## How it was made
 
 For transparency, WiFi Doctor was written with [Claude Code](https://claude.com/claude-code), Anthropic's AI coding tool. You can see this in the commits, which list Claude as co-author.
+
+## Licence
+
+WiFi Doctor is licensed under the [PolyForm Noncommercial License 1.0.0](LICENSE.md). You can use, change and share it for any noncommercial purpose. Commercial use is not permitted.
