@@ -1,8 +1,10 @@
 # WiFi Doctor
 
-A native Mac app (SwiftUI) that diagnoses public WiFi problems: router and internet reachability, DNS settings, login page (captive portal) detection, and iCloud Private Relay.
+WiFi Doctor is a Mac app that works out why public WiFi isn’t working, for example in a café, hotel or on a train, and fixes it where it can.
 
-The main window says what's wrong, offers the button that fixes it, and shows how far the connection gets (WiFi, Router, Internet, Websites). The sidebar has a page for each check and every fix, plus an on-demand **Speed Test**. **Save Report…** (⌘S) saves the diagnosis as a text file.
+It checks each step of the connection in turn: WiFi, router, internet and websites. It then tells you in one sentence what’s wrong and offers a button to fix it. It also detects login pages that haven’t appeared and checks your DNS settings and iCloud Private Relay, both of which can stop public WiFi working.
+
+You can also run a speed test and save the results as a text file (⌘S).
 
 ## Install on a Mac
 
