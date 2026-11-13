@@ -30,6 +30,8 @@ Requires macOS 14 or later. No other dependencies.
 
 To change the code, clone the repo into any folder you like, then run `./build.sh` there to build `.build/WiFi Doctor.app`, or `./build.sh --install` to install it.
 
+Command-line options on the app binary (`WiFi Doctor.app/Contents/MacOS/WiFiDoctor`): `--selftest` runs built-in checks, `--once` prints a text report, `--json` prints the diagnosis as JSON, `--version` prints the version.
+
 ## Sharing the app
 
 `./build.sh` signs the app ad hoc, which only suits the Mac that built it. To give it to someone else, sign it with a Developer ID certificate and notarise it:
@@ -42,19 +44,6 @@ xcrun stapler staple ".build/WiFi Doctor.app"
 ```
 
 `<profile>` is a notarisation profile saved once with `xcrun notarytool store-credentials`.
-
-## What's here
-
-| Path | What it is |
-| --- | --- |
-| `Sources/WiFiDoctor/` | The app: probes, verdict logic, fixes and the SwiftUI views. |
-| `Tests/WiFiDoctorTests/` | Unit tests (`swift test`). |
-| `Resources/AppIcon.icns` | App icon. |
-| `tools/makeicon.swift` | Draws the icon as a 1024px PNG (`swift tools/makeicon.swift Resources/icon1024.png`). |
-| `install.sh` | Installer. |
-| `build.sh` | Build script. |
-
-Command-line options on the app binary (`WiFi Doctor.app/Contents/MacOS/WiFiDoctor`): `--selftest` runs built-in checks, `--once` prints a text report, `--json` prints the diagnosis as JSON, `--version` prints the version.
 
 ## How it was made
 
