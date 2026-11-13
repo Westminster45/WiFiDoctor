@@ -12,33 +12,23 @@ The main window says in one sentence what's wrong, offers the button that fixes 
    xcode-select --install
    ```
 
-2. Install [Homebrew](https://brew.sh) (paste the install command from that page into Terminal), then the GitHub CLI:
+2. Build the app and install it into Applications:
 
    ```bash
-   brew install gh
+   curl -fsSL https://raw.githubusercontent.com/Westminster45/WiFiDoctor/main/install.sh | zsh
    ```
 
-3. Log in to GitHub (needed because this repo is private):
+   This downloads the code into a temporary folder, builds the app, copies it to Applications and deletes the temporary folder. Only the app is left on your Mac, as with any other app.
 
-   ```bash
-   gh auth login
-   ```
+3. Open **WiFi Doctor** from Applications. Allow Location access if asked: macOS hides the WiFi network name without it.
 
-4. Download the code, build the app and install it into Applications:
-
-   ```bash
-   gh repo clone Westminster45/WiFiDoctor ~/WiFiDoctor
-   cd ~/WiFiDoctor
-   ./build.sh --install
-   ```
-
-5. Open **WiFi Doctor** from Applications. Allow Location access if asked: macOS hides the WiFi network name without it.
-
-To update later: `cd ~/WiFiDoctor && git pull && ./build.sh --install`
-
-`--install` deletes the build files in `~/WiFiDoctor/.build` once the app is in Applications, so each update rebuilds from scratch. If you have run `./build.sh` without `--install`, or `swift test`, remove them with `rm -rf ~/WiFiDoctor/.build`.
+To update later, run the same command again.
 
 Requires macOS 14 or later. No other dependencies.
+
+### Working on the code
+
+To change the code, clone the repo into any folder you like, then run `./build.sh` there to build `.build/WiFi Doctor.app`, or `./build.sh --install` to install it. Delete the folder when you're finished.
 
 ## Sharing the app
 
@@ -61,6 +51,7 @@ xcrun stapler staple ".build/WiFi Doctor.app"
 | `Tests/WiFiDoctorTests/` | Unit tests (`swift test`). |
 | `Resources/AppIcon.icns` | App icon. |
 | `tools/makeicon.swift` | Draws the icon as a 1024px PNG (`swift tools/makeicon.swift Resources/icon1024.png`). |
+| `install.sh` | Installs or updates the app from GitHub, building in a temporary folder that it deletes afterwards. |
 | `build.sh` | Builds the app into `.build/`; `--install` copies it to Applications and deletes `.build/`. |
 
 Command-line options on the app binary (`WiFi Doctor.app/Contents/MacOS/WiFiDoctor`): `--selftest` runs built-in checks, `--once` prints a text report, `--json` prints the diagnosis as JSON, `--version` prints the version.
