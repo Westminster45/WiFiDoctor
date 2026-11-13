@@ -1,5 +1,3 @@
-# Builds the app and runs the tests on every push to main and every pull request,
-# except changes that only touch text files.
 name: Swift
 
 on:
@@ -13,6 +11,9 @@ on:
     paths-ignore:
       - "**.md"
       - ".gitignore"
+
+permissions:
+  contents: read
 
 jobs:
   build:

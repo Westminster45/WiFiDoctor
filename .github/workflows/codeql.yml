@@ -1,6 +1,3 @@
-# GitHub's CodeQL security scan of the Swift code and of the workflow files,
-# once a week and on every pull request (except pull requests that only touch
-# text files).
 name: CodeQL
 
 on:
