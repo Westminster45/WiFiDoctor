@@ -1,14 +1,9 @@
 # GitHub's CodeQL security scan of the Swift code and of the workflow files,
-# on every push to main and every pull request (except changes that only touch
-# text files), and once a week.
+# once a week and on every pull request (except pull requests that only touch
+# text files).
 name: CodeQL
 
 on:
-  push:
-    branches: [ "main" ]
-    paths-ignore:
-      - "**.md"
-      - ".gitignore"
   pull_request:
     branches: [ "main" ]
     paths-ignore:
