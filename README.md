@@ -32,19 +32,6 @@ To change the code, clone the repo into any folder you like, then run `./build.s
 
 Command-line options on the app binary (`WiFi Doctor.app/Contents/MacOS/WiFiDoctor`): `--selftest` runs built-in checks, `--once` prints a text report, `--json` prints the diagnosis as JSON, `--version` prints the version.
 
-## Sharing the app
-
-`./build.sh` signs the app ad hoc, which only suits the Mac that built it. To give it to someone else, sign it with a Developer ID certificate and notarise it:
-
-```bash
-SIGN_ID="Developer ID Application: Your Name (TEAMID)" ./build.sh
-ditto -c -k --keepParent ".build/WiFi Doctor.app" WiFiDoctor.zip
-xcrun notarytool submit WiFiDoctor.zip --keychain-profile <profile> --wait
-xcrun stapler staple ".build/WiFi Doctor.app"
-```
-
-`<profile>` is a notarisation profile saved once with `xcrun notarytool store-credentials`.
-
 ## How it was made
 
 WiFi Doctor was written with [Claude Code](https://claude.com/claude-code), Anthropic's AI coding tool. Claude wrote the code, tests and this README under the direction of the repository owner. Commits made with Claude carry a `Co-Authored-By: Claude` line.
