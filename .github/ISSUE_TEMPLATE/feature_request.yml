@@ -1,0 +1,17 @@
+name: Feature request
+description: Suggest an improvement or a new check
+labels: [enhancement]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem
+      description: What problem would this solve? Describe the situation, for example the type of WiFi network.
+    validations:
+      required: true
+  - type: textarea
+    id: suggestion
+    attributes:
+      label: Suggested change
+    validations:
+      required: true
