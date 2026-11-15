@@ -33,4 +33,4 @@ body:
     id: diagnosis
     attributes:
       label: Diagnosis shown
-      description: The one-sentence message WiFi Doctor showed, if any. Do not paste the saved report, IP addresses or network names, as issues are public.
+      description: The sentence in bold that WiFi Doctor showed, without the text below it. Do not paste the saved report, IP addresses or network names, as issues are public.
