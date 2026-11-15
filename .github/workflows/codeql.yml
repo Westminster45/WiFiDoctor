@@ -3,12 +3,18 @@ name: CodeQL
 on:
   pull_request:
     branches: [ "main" ]
-    paths-ignore:
-      - "**.md"
-      - ".gitignore"
+    paths:
+      - "Sources/**"
+      - "Tests/**"
+      - "Package.swift"
+      - ".github/workflows/**"
   schedule:
     - cron: "23 4 * * 1"
   workflow_dispatch:
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: ${{ github.event_name == 'pull_request' }}
 
 jobs:
   analyze:
@@ -31,13 +37,13 @@ jobs:
             runner: macos-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: github/codeql-action/init@v3
+      - uses: github/codeql-action/init@v4
         with:
           languages: ${{ matrix.language }}
           build-mode: ${{ matrix.build-mode }}
       - if: matrix.build-mode == 'manual'
         name: Build
         run: swift build
-      - uses: github/codeql-action/analyze@v3
+      - uses: github/codeql-action/analyze@v4
         with:
           category: "/language:${{ matrix.language }}"
