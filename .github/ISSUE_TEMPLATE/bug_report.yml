@@ -29,9 +29,8 @@ body:
       label: macOS version
     validations:
       required: true
-  - type: textarea
-    id: report
+  - type: input
+    id: diagnosis
     attributes:
-      label: Saved report
-      description: Optional. Paste the report saved with ⌘S. Remove anything you do not want to share.
-      render: text
+      label: Diagnosis shown
+      description: The one-sentence message WiFi Doctor showed, if any. Do not paste the saved report, IP addresses or network names, as issues are public.
