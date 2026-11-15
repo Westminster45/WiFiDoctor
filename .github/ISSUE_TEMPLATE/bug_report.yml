@@ -20,7 +20,7 @@ body:
     id: app-version
     attributes:
       label: WiFi Doctor version
-      description: Shown at the bottom of the window.
+      description: The number after "Version" at the bottom of the window. Copy only the number, not the line above it, which can show the network name.
     validations:
       required: true
   - type: input

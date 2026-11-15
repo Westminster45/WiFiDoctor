@@ -4,7 +4,7 @@ Thank you for your interest in WiFi Doctor.
 
 ## Reporting a problem
 
-Open an issue using the bug report template. Include your macOS version, the WiFi Doctor version (shown at the bottom of the window) and the sentence in bold that WiFi Doctor showed, without the text below it. Issues are public, so do not paste the saved report, IP addresses or network names.
+Open an issue using the bug report template. Include your macOS version, the WiFi Doctor version number (after "Version" at the bottom of the window) and the sentence in bold that WiFi Doctor showed, without the text below it. Issues are public, so do not paste the saved report, IP addresses or network names.
 
 ## Suggesting a change
 
