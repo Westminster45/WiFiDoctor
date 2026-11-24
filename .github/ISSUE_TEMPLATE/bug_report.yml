@@ -1,0 +1,36 @@
+name: Bug report
+description: Report something that is not working
+labels: [bug]
+body:
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened
+      description: What did WiFi Doctor do, and what did you expect it to do?
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      placeholder: |
+        1. Connect to …
+        2. Click …
+  - type: input
+    id: app-version
+    attributes:
+      label: WiFi Doctor version
+      description: The number after "Version" at the bottom of the window. Copy only the number, not the line above it, which can show the network name.
+    validations:
+      required: true
+  - type: input
+    id: macos-version
+    attributes:
+      label: macOS version
+    validations:
+      required: true
+  - type: input
+    id: diagnosis
+    attributes:
+      label: Diagnosis shown
+      description: The sentence in bold that WiFi Doctor showed, without the text below it. Do not paste the saved report, IP addresses or network names, as issues are public.
